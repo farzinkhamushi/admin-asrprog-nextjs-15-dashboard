@@ -1,0 +1,23 @@
+.content{
+    position: relative;
+    width: calc(100% - 230px);
+    left: 230px;
+    transition: all 0.3s ease;
+}
+
+/*doesn't work in react*/
+.sidebar.close~.content{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+/* replaced with this*/
+.openAndclose{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+.content .main{
+    width: 100%;
+    padding: 36px 24px;
+    max-height: calc(100vh - 56px);
+}

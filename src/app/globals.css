@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*my modify
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*/
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+/*my modify*/
+  --light: #f6f6f9;
+  --primary: #1976D2;
+  --light-primary: #CFE8FF;
+  --grey: #eee;
+  --dark-grey: #AAAAAA;
+  --dark: #363949;
+  --danger: #D32F2F;
+  --light-danger: #FECDD3;
+  --warning: #FBC02D;
+  --light-warning: #FFF2C6;
+  --success: #388E3C;
+  --light-success: #BBF7D0;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar{
+      width: 200px;
+  }
+
+  .content{
+      width: calc(100% - 60px);
+      left: 200px;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  
+  .content .nav form .form-input input{
+      display: none;
+  }
+
+  .content .nav form .form-input button{
+      width: auto;
+      height: auto;
+      background: transparent;
+      color: var(--dark);
+      border-radius: none;
+  }
+
+  .content .nav form.show .form-input input{
+      display: block;
+      width: 100%;
+  }
+
+  .content .nav form.show .form-input button{
+      width: 36px;
+      height: 100%;
+      color: var(--light);
+      background: var(--danger);
+      border-radius: 0 36px 36px 0;
+  }
+
+  .content .nav form.show~.notif, .content .nav form.show~.profile{
+      display: none;
+  }
+
+  .content .main .insights {
+      grid-template-columns: 1fr;
+  }
+
+  .content .main .bottom-data .header{
+      min-width: 340px;
+  }
+
+  .content .main .bottom-data .orders table{
+      min-width: 340px;
+  }
+
+  .content .main .bottom-data .reminders .task-list{
+      min-width: 340px;
+  }
+
+}
+
+
+/* my modify*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bx{
+  font-size: 1.7rem;
+}
+
+/*my modify*/
+Link{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li{
+  list-style: none;
+}
+
+html{
+  overflow-x: hidden;
+}
+/*my modify ends*/
+
+body {
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  /*
+  my modify
+  background: var(--background);
+  */
+  background: var(--grey);
+  overflow-x: hidden;
+}
+
+body.dark{
+  --light: #181a1e;
+  --grey: #25252c;
+  --dark: #fbfbfb;
+}

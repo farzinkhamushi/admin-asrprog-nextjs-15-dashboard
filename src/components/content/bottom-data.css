@@ -1,0 +1,141 @@
+.content .main .bottom-data{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 24px;
+    margin-top: 24px;
+    width: 100%;
+    color: var(--dark);
+}
+
+.content .main .bottom-data>div{
+    border-radius: 20px;
+    background: var(--light);
+    padding: 24px;
+    overflow-x: auto;
+}
+
+.content .main .bottom-data .header{
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+    margin-bottom: 24px;
+}
+
+.content .main .bottom-data .header h3{
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.content .main .bottom-data .header .bx{
+    cursor: pointer;
+}
+
+.content .main .bottom-data .orders{
+    flex-grow: 1;
+    flex-basis: 500px;
+}
+
+.content .main .bottom-data .orders table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content .main .bottom-data .orders table th{
+    padding-bottom: 12px;
+    font-size: 13px;
+    text-align: left;
+    border-bottom: 1px solid var(--grey);
+}
+
+.content .main .bottom-data .orders table td{
+    padding: 16px 0;
+}
+
+.content .main .bottom-data .orders table tr td:first-child{
+    display: flex;
+    align-items: center;
+    grid-gap: 12px;
+    padding-left: 6px;
+}
+
+.content .main .bottom-data .orders table td img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.content .main .bottom-data .orders table tbody tr{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.content .main .bottom-data .orders table tbody tr:hover{
+    background: var(--grey);
+}
+
+.content .main .bottom-data .orders table tr td .status{
+    font-size: 10px;
+    padding: 6px 16px;
+    color: var(--light);
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.content .main .bottom-data .orders table tr td .status.completed{
+    background: var(--success);
+}
+
+.content .main .bottom-data .orders table tr td .status.process{
+    background: var(--primary);
+}
+
+.content .main .bottom-data .orders table tr td .status.pending{
+    background: var(--warning);
+}
+
+.content .main .bottom-data .reminders{
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+.content .main .bottom-data .reminders .task-list{
+    width: 100%;
+}
+
+.content .main .bottom-data .reminders .task-list li{
+    width: 100%;
+    margin-bottom: 16px;
+    background: var(--grey);
+    padding: 14px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content .main .bottom-data .reminders .task-list li .task-title{
+    display: flex;
+    align-items: center;
+}
+
+.content .main .bottom-data .reminders .task-list li .task-title p{
+    margin-left: 6px;
+}
+
+.content .main .bottom-data .reminders .task-list li .bx{
+  cursor: pointer;  
+}
+
+.content .main .bottom-data .reminders .task-list li.completed{
+    border-left: 10px solid var(--success);
+}
+
+.content .main .bottom-data .reminders .task-list li.not-completed{
+    border-left: 10px solid var(--danger);
+}
+
+.content .main .bottom-data .reminders .task-list li:last-child{
+   margin-bottom: 0;
+}
